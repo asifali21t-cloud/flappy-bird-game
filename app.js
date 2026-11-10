@@ -23,8 +23,8 @@ const leaderboardRows = document.getElementById("leaderboard-rows");
 
 let birdY = 200;
 let birdVelocity = 0;
-let gravity = 0.4;
-let jump = -6.5;
+let gravity = 0.25;
+let jump = -5.0;
 let score = 0;
 let pipes = [];
 let gameInterval;
