@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer Flappy Bird</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Side: Game Screen -->
+        <div class="game-area">
+            <h1>🚀 Flappy Bird Arcade</h1>
+            <div id="setup-screen">
+                <input type="text" id="player-name" placeholder="Apna Name Likho..." maxlength="15">
+                <button id="start-btn">Start Flight</button>
+            </div>
+            
+            <canvas id="gameCanvas" width="320" height="480" style="display:none;"></canvas>
+            
+            <div id="game-over-screen" style="display:none;">
+                <h2>Game Over! 💥</h2>
+                <p>Score: <span id="final-score">0</span></p>
+                <button id="restart-btn">Fly Again</button>
+            </div>
+        </div>
+
+        <!-- Right Side: Online Leaderboard -->
+        <div class="leaderboard-area">
+            <h2>🏆 World Leaderboard (Top 5)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>High Score</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-rows">
+                    <tr><td colspan="3" style="text-align:center;">Loading scores...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Google Firebase Libraries (Database integration ke liye) -->
+    <script src="https://gstatic.com"></script>
+    <script src="https://gstatic.com"></script>
+    
+    <!-- Hamari game ki logic file -->
+    <script src="app.js"></script>
+</body>
+</html>
